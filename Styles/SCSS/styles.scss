@@ -1,0 +1,823 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "titulo principal";
+    src: url(./../../Fonts/FamiljenGrotesk-Bold.ttf);
+}
+
+@font-face {
+    font-family: "subtitulos";
+    src: url(./../../Fonts/FamiljenGrotesk-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "texto";
+    src: url(./../../Fonts/FamiljenGrotesk-Regular.ttf);
+}
+
+@import "../variables/vars";
+
+.titulo__logo {
+    display: flex;
+    gap: 5px;
+    padding: 15px;
+    background-image: linear-gradient($bg-grey, lightgrey);
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+
+    .titulo__principal {
+        font-family: "titulo principal";
+        font-size: 60px;
+    }
+
+    .container__header__img {
+        width: 35px;
+
+        .header__img {
+            width: 100%;
+        }
+    }
+}
+
+.navbar {
+    background-image: map-get($map: $navbar, $key: bg-color);
+    box-shadow: map-get($map: $navbar, $key: shadow);
+    font-family: "subtitulos"
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    background-color: lightgrey;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+
+    .card1 {
+        display: flex;
+        justify-content: center;
+
+        .card__main {
+            width: 100%;
+            background-color: white;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 1px 1px 3px black;
+            margin: 1%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+
+            .container__card__img__main {
+                width: 40%;
+                border-radius: 15px;
+                overflow: hidden;
+                margin: 1%;
+
+
+                .card__img__main {
+                    width: 100%;
+                }
+            }
+
+            .container__card__text {
+                width: 60%;
+                text-align: center;
+                margin: 1%;
+                font-family: "subtitulos";
+
+                .container__card__text__titulo {
+                }
+
+                .container__card__text__parrafo {
+                    font-family: "texto";
+                    color: black;
+                }
+            }
+
+        }
+    }
+
+    .card2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .card__main {
+            width: 100%;
+            background-color: white;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 1px 1px 3px black;
+            margin: 1%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .container__card__img__main {
+                width: 60%;
+                margin: 1%;
+                margin-bottom: 0%;
+
+                .card__img__main {
+                    width: 100%;
+                }
+            }
+
+            .container__card__text {
+                width: 60%;
+                text-align: center;
+                margin-bottom: 5%;
+                
+                .container__card__text__parrafo {
+                    font-family: "subtitulos";
+                }
+            }
+
+        }
+    }
+
+    .card3 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .card__main {
+            width: 100%;
+            background-color: white;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 1px 1px 3px black;
+            margin: 1%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .container__card__img__main {
+                width: 60%;
+                margin: 1%;
+                margin-bottom: 0%;
+
+                .card__img__main {
+                    width: 100%;
+                }
+            }
+
+            .container__card__text {
+                width: 60%;
+                text-align: center;
+                margin-bottom: 5%;
+
+                .container__card__text__parrafo {
+                    font-family: "subtitulos";
+                }
+            }
+
+        }
+    }
+}
+
+.main__paginas {
+    @extend .main;
+    padding-top: 0px;
+}
+
+.main__paginas__contacto {
+    @extend .main__paginas;
+    flex-direction: column;
+    align-content: center;
+
+    .info__contacto {
+        padding-right: 5%;
+        padding-left: 5%;
+        padding-bottom: 2%;
+        padding-top: 2%;
+        text-align: center;
+        font-family: "texto";
+    }
+
+    .form__map__contacto {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        gap: 5%;
+
+        .form__contacto {
+            align-self: center;
+            box-shadow: 1px 1px 3px black;
+            border-radius: 10px;
+            padding: 2%;
+            text-align: left;
+            background-color: $bg-alice;
+            width: 40%;
+        }
+
+        .container__ubicacion {
+            width: 40%;
+
+            .ubicacion {
+                width: 100%;
+            }
+        }
+
+
+    }
+
+
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-image: linear-gradient(lightgrey, grey);
+
+    .footer__img {
+        display: flex;
+        width: 100%;
+        height: 7vh;
+        justify-content: space-around;
+
+        .imagenes__redes {
+            height: 100%;
+        }
+    }
+}
+
+@mixin containertitulos ($flex, $center, $height, $textcenter) {
+    display: $flex;
+    align-items: $center;
+    height: $height;
+    text-align: $textcenter;
+}
+
+.ContenedorTitulos {
+    height: 15vh;
+    align-self: center;
+
+    .Titulos {
+        @include containertitulos(flex, center, 100%, center);
+        font-family: "subtitulos";
+        font-size: 45px;
+    }
+}
+
+.VideoProductos {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+
+    .Video__productos {
+        width: 15%;
+        border-radius: 20px;
+    }
+}
+
+.ListasDePrecios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    padding-top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 5%;
+
+    .cards__listas {
+        border-radius: 20px;
+        background-color: $bg-alice;
+        overflow: hidden;
+        padding: 5px;
+        border: 2px solid;
+
+        &:hover {
+            transform: scale(120%, 120%);
+            box-shadow: 5px 5px 25px black;
+        }
+
+        ul {
+            background-color: $bg-alice;
+            padding-left: 0px;
+
+            li {
+                list-style-type: none;
+                text-decoration: none;
+            }
+        }
+
+        .titulos__listas {
+            text-align: center;
+            background-color: $bg-alice;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.img__descripcion__form__liberacion {
+    display: flex;
+    padding-left: 2%;
+    padding-right: 2%;
+
+    .ContenedorImgLiberacion {
+        width: 30%;
+        padding-left: 2%;
+        padding-right: 2%;
+
+        .ContenedorImgLiberacion__Img {
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+
+    .descripcion__form {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .descripcion__liberacion {
+            font-family: "texto";
+        }
+
+        .form__liberacion {
+            align-self: center;
+            width: 60%;
+            box-shadow: 1px 1px 3px black;
+            border-radius: 10px;
+            padding: 2%;
+            text-align: left;
+            background-color: $bg-alice;
+
+            .form__title {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.img__descripcion__form__servicio {
+    display: flex;
+    padding-left: 2%;
+    padding-right: 2%;
+
+    .ContenedorImgServicio {
+        width: 30%;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .ContenedorImgServicio__Img {
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+
+    .DescripcionServicio {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .DescripcionServicio__text {
+            font-family: "subtitulos";
+        }
+
+        .icons__servicio {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 5vh;
+            margin-top: 5vh;
+            font-family: "texto";
+
+            .cards__servicio {
+                box-shadow: 1px 1px 3px black;
+                border-radius: 10px;
+                width: 20vw;
+                padding: 1%;
+                background-color: $bg-alice;
+
+                .icons {
+                    width: 40%;
+                    display: block;
+                    margin: auto;
+                }
+
+                .text__servicio {
+                    text-align: center;
+                }
+            }
+        }
+
+        .form__servicio {
+            align-self: center;
+            width: 60%;
+            box-shadow: 1px 1px 3px black;
+            border-radius: 10px;
+            padding: 2%;
+            text-align: left;
+            background-color: $bg-alice;
+
+            .form__title {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {}
+
+@media screen and (max-width: 860px) {
+
+    .main .card1 .card__main {
+        flex-direction: column;
+    }
+
+    .main .card1 .card__main .container__card__img__main {
+        width: 60%;
+    }
+
+    .main .card1 .card__main .container__card__text {
+        width: 100%;
+    }
+
+    .main .card2 .card__main {
+        flex-direction: column;
+    }
+
+    .main .card2 .card__main .container__card__img__main {
+        width: 100%;
+    }
+
+    .main .card2 .card__main .container__card__text {
+        width: 100%;
+    }
+
+    .main .card3 .card__main {
+        flex-direction: column;
+    }
+
+    .main .card3 .card__main .container__card__img__main {
+        width: 100%;
+    }
+
+    .main .card3 .card__main .container__card__text {
+        width: 100%;
+    }
+
+    .titulo__logo .titulo__principal {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footer .footer__img {
+        height: 7vh;
+    }
+
+    .img__descripcion__form__liberacion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img__descripcion__form__liberacion .descripcion__form .form__liberacion {
+        width: 80%;
+        font-size: 12px;
+    }
+
+    .ListasDePrecios {
+        gap: 2rem;
+    }
+
+    .VideoProductos .Video__productos {
+        width: 25%;
+    }
+
+    .img__descripcion__form__servicio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img__descripcion__form__servicio .ContenedorImgServicio {
+        width: 50%;
+    }
+
+    .img__descripcion__form__liberacion .ContenedorImgLiberacion {
+        width: 50%;
+    }
+
+    .descripcion__form {
+        width: 100%;
+    }
+
+    .img__descripcion__form__servicio .DescripcionServicio {
+        margin-top: 3vh;
+    }
+
+    .img__descripcion__form__servicio .DescripcionServicio .icons__servicio {
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+    }
+
+    .img__descripcion__form__servicio .DescripcionServicio .form__servicio {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .main .card1 .card__main {
+        flex-direction: column;
+    }
+
+    .main .card1 .card__main .container__card__img__main {
+        width: 60%;
+    }
+
+    .main .card1 .card__main .container__card__text {
+        width: 100%;
+    }
+
+    .main .card2 .card__main {
+        flex-direction: column;
+    }
+
+    .main .card2 .card__main .container__card__img__main {
+        width: 100%;
+    }
+
+    .main .card2 .card__main .container__card__text {
+        width: 100%;
+    }
+
+    .main .card3 .card__main {
+        flex-direction: column;
+    }
+
+    .main .card3 .card__main .container__card__img__main {
+        width: 100%;
+    }
+
+    .main .card3 .card__main .container__card__text {
+        width: 100%;
+    }
+
+    .main__paginas__contacto .form__map__contacto {
+        flex-direction: column;
+    }
+
+    .main__paginas__contacto .form__map__contacto .form__contacto {
+        width: 70%;
+        margin-bottom: 5%;
+        font-size: 12px;
+    }
+
+    .main__paginas__contacto .form__map__contacto .container__ubicacion {
+        width: 70%;
+        align-self: center;
+    }
+
+    .ContenedorTitulos .Titulos {
+        font-size: 40px;
+    }
+
+    .ListasDePrecios .cards__listas .titulos__listas {
+        font-size: 20px;
+    }
+
+    .ListasDePrecios .cards__listas ul {
+        font-size: 13px;
+    }
+
+    .img__descripcion__form__liberacion .descripcion__form .descripcion__liberacion {
+        font-size: 13px;
+    }
+
+    .img__descripcion__form__liberacion .descripcion__form .form__liberacion .form__title {
+        font-size: 18px;
+    }
+
+    .img__descripcion__form__servicio .DescripcionServicio .form__servicio .form__title {
+        font-size: 18px;
+    }
+
+    .main__paginas__contacto .info__contacto {
+        font-size: 13px;
+    }
+
+    .img__descripcion__form__servicio .DescripcionServicio .DescripcionServicio__text {
+        margin-bottom: 0;
+    }
+
+    .img__descripcion__form__liberacion .descripcion__form {
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .img__descripcion__form__servicio .DescripcionServicio .icons__servicio .cards__servicio {
+        width: 25vw;
+    }
+
+    .ListasDePrecios {
+        gap: 1rem;
+    }
+
+    .VideoProductos .Video__productos {
+        width: 30%;
+    }
+
+    .titulo__logo .titulo__principal {
+        font-size: 35px;
+    }
+
+    .main .card1 .card__main .container__card__text .container__card__text__parrafo {
+        font-size: 12px;
+    }
+
+    .main .card2 .card__main .container__card__text .container__card__text__parrafo {
+        font-size: 18px;
+    }
+
+    .main .card3 .card__main .container__card__text .container__card__text__parrafo {
+        font-size: 18px;
+    }
+
+    .ContenedorTitulos .Titulos {
+        font-size: 35px;
+    }
+
+    .img__descripcion__form__servicio .DescripcionServicio .DescripcionServicio__text {
+        font-size: 18px;
+    }
+
+    .img__descripcion__form__servicio .DescripcionServicio .icons__servicio .cards__servicio .text__servicio {
+        font-size: 14px;
+    }
+
+    .img__descripcion__form__servicio .DescripcionServicio .form__servicio .form__title {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .footer .footer__img {
+        height: 5vh;
+    }
+
+    .img__descripcion__form__liberacion .descripcion__form .form__liberacion {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .img__descripcion__form__servicio .ContenedorImgServicio {
+        width: 80%;
+    }
+
+    .img__descripcion__form__liberacion .ContenedorImgLiberacion {
+        width: 80%;
+    }
+
+    .img__descripcion__form__servicio .DescripcionServicio .icons__servicio .cards__servicio {
+        width: 45vw;
+    }
+
+    .main .card1 {
+        justify-content: center;
+    }
+
+    .main .card1 .card__main {
+        width: 80%;
+    }
+
+    .main .card2 {
+        justify-content: center;
+    }
+
+    .main .card2 .card__main {
+        width: 80%;
+    }
+
+    .main .card3 {
+        justify-content: center;
+    }
+
+    .main .card3 .card__main {
+        width: 80%;
+    }
+
+    .main__paginas__contacto .form__map__contacto .form__contacto {
+        width: 80%;
+    }
+
+    .main__paginas__contacto .form__map__contacto .container__ubicacion {
+        width: 80%;
+    }
+
+    .VideoProductos .Video__productos {
+        width: 30%;
+    }
+
+    .titulo__logo .titulo__principal {
+        font-size: 25px;
+    }
+
+    .main .card1 .card__main .container__card__text .container__card__text__titulo {
+        font-size: 13px;
+    }
+
+    .main .card2 .card__main .container__card__text .container__card__text__parrafo {
+        font-size: 13px;
+    }
+
+    .main .card3 .card__main .container__card__text .container__card__text__parrafo {
+        font-size: 13px;
+    }
+
+    .main .card1 .card__main .container__card__text .container__card__text__parrafo {
+        font-size: 10px;
+    }
+
+    .ContenedorTitulos .Titulos {
+        font-size: 22px;
+    }
+
+    .ListasDePrecios .cards__listas .titulos__listas {
+        font-size: 15px;
+    }
+
+    .ListasDePrecios .cards__listas ul {
+        font-size: 10px;
+    }
+
+    .img__descripcion__form__liberacion .descripcion__form .descripcion__liberacion {
+        font-size: 11px;
+    }
+
+    .img__descripcion__form__liberacion .descripcion__form .form__liberacion .form__title {
+        font-size: 13px;
+    }
+
+    .img__descripcion__form__servicio .DescripcionServicio .DescripcionServicio__text {
+        font-size: 15px;
+    }
+
+    .img__descripcion__form__servicio .DescripcionServicio .icons__servicio .cards__servicio .text__servicio {
+        font-size: 12px;
+    }
+
+    .img__descripcion__form__servicio .DescripcionServicio .form__servicio .form__title {
+        font-size: 13px;
+    }
+
+    .main__paginas__contacto .info__contacto {
+        font-size: 11px;
+    }
+}
+    
+
+@media screen and (max-width: 200px) {
+    .footer .footer__img {
+        height: 4vh;
+    }
+
+    .img__descripcion__form__servicio .ContenedorImgServicio {
+        width: 100%;
+    }
+
+    .img__descripcion__form__liberacion .ContenedorImgLiberacion {
+        width: 100%;
+    }
+
+    .img__descripcion__form__liberacion .descripcion__form .form__liberacion {
+        width: 120%;
+    }
+
+    .img__descripcion__form__servicio .DescripcionServicio .icons__servicio .cards__servicio {
+        width: 75vw;
+    }
+
+    .img__descripcion__form__servicio .DescripcionServicio .form__servicio {
+        width: 130%;
+    }
+
+    .VideoProductos .Video__productos {
+        width: 55%;
+    }
+
+    .main .card1 .card__main .container__card__text .container__card__text__parrafo {
+        font-size: 8px;
+    }
+
+    .main .card2 .card__main .container__card__text .container__card__text__parrafo {
+        font-size: 10px;
+    }
+
+    .main .card3 .card__main .container__card__text .container__card__text__parrafo {
+        font-size: 10px;
+    }
+}
